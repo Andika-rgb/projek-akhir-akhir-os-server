@@ -26,3 +26,18 @@ andika hendrawan_23.83.0976_23TK01
 
     sudo a2ensite server1.conf
     sudo systemctl reload apache2
+    
+# Buka Port 80 untuk HTTP:
+
+    sudo ufw allow 80/tcp
+    sudo ufw enable
+    sudo ufw status
+
+# 2. Instal Grafana menggunakan snap:
+    sudo snap install grafana
+# Mulai Grafana: Setelah instalasi selesai, mulai layanan Grafana:
+    sudo systemctl start snap.grafana.grafana
+    sudo systemctl enable snap.grafana.grafana
+    sudo ufw allow 3000/tcp
+akses Grafana: Buka browser dan kunjungi http://192.168.100.62:3000 untuk mengakses Grafana.
+
